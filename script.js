@@ -38,19 +38,23 @@ const scroll = new LocomotiveScroll({
   smooth: true,
 });
 
+// Starting Menu bar Animation Code
 const menuBtn = document.querySelector(".menu-btn");
 let menuOpen = false;
-
+let menuLinks = document.querySelector(".menu-items ul");
 menuBtn,
   addEventListener("click", () => {
     if (!menuOpen) {
       menuBtn.classList.add("open");
+      menuLinks.style.display = "flex";
       menuOpen = true;
     } else {
       menuBtn.classList.remove("open");
+      menuLinks.style.display = "none";
       menuOpen = false;
     }
   });
+// Ending Menu bar Animation Code
 
 let elms = document.querySelectorAll(".elem");
 let page2 = document.querySelector("#page2");
