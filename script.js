@@ -33,10 +33,17 @@ function loading() {
 }
 
 loading();
+// Locomotive code Start here
 const scroll = new LocomotiveScroll({
   el: document.querySelector("#main"),
   smooth: true,
 });
+
+let foot = document.querySelector("footer h3");
+foot.addEventListener("click", () => {
+  scroll.scrollTo(0);
+});
+// Locomotive code Ends here
 
 // Starting Menu bar Animation Code
 const menuBtn = document.querySelector(".menu-btn");

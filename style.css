@@ -101,6 +101,7 @@ nav {
 .menu-items ul li {
   text-transform: capitalize;
   list-style: none;
+  font-size: 2vw;
 }
 /* Nav bar End Here */
 #main {
@@ -213,7 +214,76 @@ nav {
 }
 
 #page3 {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   background-color: white;
+}
+
+.img-container {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.line .img-div {
+  margin-top: 18px;
+}
+
+.line:nth-child(1) {
+  /* background-color: red; */
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.178);
+  position: absolute;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease;
+  padding: 12px;
+  z-index: 99;
+}
+
+.overlay p {
+  text-align: center;
+  font-size: 2.5vw;
+  text-transform: capitalize;
+  color: white;
+  opacity: 0;
+  transition: all 0.5s ease;
+  transition-delay: 0.2s;
+}
+.overlay em {
+  display: block;
+}
+
+.img-div:hover .overlay {
+  background-color: #000;
+}
+.img-div:hover .overlay p {
+  opacity: 1;
+}
+.img-div:hover img {
+  scale: 1.05;
+}
+
+.img-div {
+  /* height: 80vh; */
+  width: 30vw;
+  /* background-color: red; */
+  object-fit: cover;
+  position: relative;
+  overflow: hidden;
+}
+.img-div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.5s ease;
 }
